@@ -131,7 +131,7 @@ class bobs_popular_posts extends WP_Widget {
 			while ( $the_query->have_posts() ) {
 				$the_query->the_post();
 				echo '<li>';
-				echo '<a href="' . get_the_permalink() .'" rel="bookmark">';
+				echo '<a href="' . get_permalink() .'" rel="bookmark">';
 				echo get_the_title();
 				echo ' (' . (int) get_post_meta( get_the_ID(), 'views', true ) . ')';
 				echo '</a>';
